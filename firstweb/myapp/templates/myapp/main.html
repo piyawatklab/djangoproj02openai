@@ -4,13 +4,13 @@
 
 <h3>Description of an image</h3>
 
-<from method="post" autocapitalize="off">
+<form method="post" autocapitalize="off">
     {% csrf_token %}
     <input type="text" class="form-control" name="user_input">
     <button type="submit" class="btn btn-primary mt-3">
         Submit
     </button>
 
-</from>
+</form>
 
 {% endblock content %}

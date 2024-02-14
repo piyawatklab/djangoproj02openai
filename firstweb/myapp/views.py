@@ -9,9 +9,11 @@ api_key = os.getenv("OPENAI_KEY", None)
 openai.api_key = api_key
 
 def Home(request):
+    print(api_key)
+    print(request.method)
     if api_key is not None and request.method == 'POST':
         user_imput = request.POST.get('user_imput')
-        response = openai.images.generate(
+        response = openai.Image.create(
             prompt = user_imput,
             size = '256x256'
         )
